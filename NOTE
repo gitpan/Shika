@@ -1,0 +1,15 @@
+WE ARE JAPANESE!  WE ARE JAPANESE!  WE ARE JAPANESE!  WE ARE JAPANESE!  WE ARE JAPANESE!  WE ARE JAPANESE!
+
+設計メモ。
+
+ro な accessor とかいらなくない?(we use perl. not a java =)
+    debug modeでroしてもいいかも
+isa における type validation はオンオフ切換え可能(debug 時のみ有効)
+    これはもう出来たね、coerceする時はdebugじゃなくてもisa見るけど
+coerce はたんなる callback coderef にする
+    mooseっぽくなったよ
+with Foo => {alias => {foo => bar}}; じゃなくて with {role => 'Foo', alias => {foo => 'bar'}}; でよくね?
+    Yappo さんががんばってなんかしたいらしい
+       やっぱ別に頑張んなくてもいいやちおおもったよ
+confess() は export しません。blessed も
+    blessedつかいたひ
